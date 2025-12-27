@@ -1,0 +1,121 @@
+/* Page Wrapper */
+.single-product-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border: none;
+}
+
+/* Main Card */
+.single-product-card {
+  display: flex;
+  flex-direction: row;
+  max-width: 1100px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+/* Image Section (Left) */
+.single-product-image-wrapper {
+  flex: 1;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.single-product-image {
+  max-width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+}
+
+/* Content Section (Right) */
+.single-product-card .card-body {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-product-card .card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.single-product-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+
+.single-product-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
+.single-product-buy-button {
+  order: 2;
+  margin-left: auto;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.single-product-price {
+  order: 1;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .single-product-card {
+    flex-direction: column;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .single-product-wrapper {
+    padding: 0.5rem;
+  }
+
+  .single-product-image-wrapper {
+    padding: 1rem;
+  }
+
+  .single-product-image {
+    max-height: 180px;
+  }
+
+  .single-product-card .card-body {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .single-product-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.6rem;
+    padding: 1rem;
+  }
+}
