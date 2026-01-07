@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import productRoutes from "../routes/productRoutes.js";
 import auth from "../routes/auth.js";
+import mongoose from "mongoose";
 
 
 
@@ -13,9 +14,18 @@ app.use(express.json());
 const PORT = 5000;
 
 
-//connecting product routes
+// MongoDB connection
+mongoose.connect('mongodb://localhost:27017/ProductsDB')
+.then(() => {
+    console.log("Connected to MongoDB");
+})
+.catch((err) => {
+    console.error("Error connecting to MongoDB:", err);
+});
 
-app.use('/api/products', productRoutes);
+
+app.use("/api/products",productRoutes);
+app.use("/products",productRoutes);
 
 app.use("/api/auth",auth);
 
@@ -28,9 +38,5 @@ app.listen(PORT, () => {
 
 
 
-//  Endpoints to test:
-//  http://localhost:5000/api/products
-//  http://localhost:5000/api/products?filter=category&value=electronics
-//  http://localhost:5000/api/products/5
 
-// http://localhost:5000/api/auth/login
+

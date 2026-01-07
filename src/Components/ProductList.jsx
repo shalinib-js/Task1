@@ -66,9 +66,9 @@ const ProductList = ({ searchTerm = "", selectedCategory = "all" }) => {
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <Card
-              key={product.id}
+              key={product._id}
               className="product-card"
-              onClick={() => navigate(`/product/${product.id}`)}
+              onClick={() => navigate(`/product/${product._id}`)}
               style={{ cursor: "pointer" }}
             >
               <div className="product-img-wrapper">

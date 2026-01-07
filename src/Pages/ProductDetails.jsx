@@ -11,14 +11,15 @@ const ProductDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/products")
-      .then((res) => res.json())
-      .then((data) => {
-        const singleProduct = data.find((item) => item.id === Number(id));
-        setProduct(singleProduct);
-      })
-      .finally(() => setIsLoading(false));
-  }, [id]);
+  fetch(`http://localhost:5000/api/products/${id}`)
+    .then((res) => {
+      if (!res.ok) throw new Error("Product not found");
+      return res.json();
+    })
+    .then((data) => setProduct(data))
+    .catch(() => setProduct(null))
+    .finally(() => setIsLoading(false));
+}, [id]);
 
   if (isLoading) {
     return <div className="loading"><OrbitProgress color="black" size="medium" /></div>;
