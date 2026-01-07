@@ -72,8 +72,18 @@ vite-project/
 └── README.md
 
 
+### ▶️ Frontend (React)
 
+```bash
+npm install
+npm run dev
 
+### ▶️ Run Backend (Node.js)
+
+```bash
+cd Backend
+npm install
+npm run start-dev
 
 
 
