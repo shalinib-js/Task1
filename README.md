@@ -15,7 +15,7 @@ A full-stack product management application built using **React (Vite)** for the
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - React (Vite)
@@ -33,43 +33,6 @@ A full-stack product management application built using **React (Vite)** for the
 - npm
 
 ---
-
-## 📁 Project Structure
-
-```bash
-vite-project/
-├── Backend/
-│   ├── routes/
-│   │   ├── auth.js
-│   │   └── productRoutes.js
-│   ├── src/
-│   │   └── index.mjs
-│   ├── package.json
-│   └── package-lock.json
-│
-├── src/
-│   ├── Components/
-│   │   ├── NavBar.jsx
-│   │   ├── SearchBar.jsx
-│   │   ├── Filter.jsx
-│   │   ├── ProductList.jsx
-│   │   └── ProductDetails.css
-│   ├── Pages/
-│   │   ├── Home.jsx
-│   │   ├── Login.jsx
-│   │   └── ProductDetails.jsx
-│   ├── data/
-│   │   └── db.json
-│   ├── App.jsx
-│   ├── App.css
-│   ├── main.jsx
-│   └── index.css
-│
-├── index.html
-├── vite.config.js
-├── package.json
-├── package-lock.json
-└── README.md
 
 
 ### ▶️ Frontend (React)
