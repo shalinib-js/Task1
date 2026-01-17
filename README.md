@@ -35,13 +35,13 @@ A full-stack product management application built using **React (Vite)** for the
 ---
 
 
-### ▶️ Frontend (React)
+###  Frontend (React)
 
 ```bash
 npm install
 npm run dev
 
-### ▶️ Run Backend (Node.js)
+###  Run Backend (Node.js)
 
 ```bash
 cd Backend
